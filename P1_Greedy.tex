@@ -45,6 +45,14 @@
 \author{Mauricio Velasco}
 \maketitle{}
 \begin{enumerate} 
+
+\item {\it Scheduling avaricioso} Suponga que tenemos $N=100$ trabajos que deben compartir un mismo recurso. La longitud y la prioridad del $t$-ésimo trabajo estan dadas por $\ell_t:=(t-1)^2+4$ y $w_t=(t-5)^3$.
+\begin{enumerate}
+\item Escriba una implementación de un algoritmo que calcule el mínimo tiempo total requerido para cuplir esas tareas.
+\item Escriba tablas con los tiempos mínimos requeridos y las listas de las primeras $5$ y últimas $5$ tareas para $N=10$,$N=100$, $N=1000$.
+\end{enumerate} 
+
+
 \item Implemente una clase \verb!Grafo_no_dirigido! que represente un grafo \verb!G! como lista de adyacencia. La clase debe recibir sólo el número de vértices del grafo e implementar las operaciones \verb!G.nueva_arista(i,j)! , \verb!G.nuevo_vertice()! y \verb!G.print()!.
 \begin{enumerate}
 \item Escriba el c\'odigo de su implementaci\'on.
@@ -77,7 +85,7 @@
 \item Use el Teorema de Birkhoff y la matriz que calculo en la parte $(b)$ para demostrar que $K_n$ tiene $n^{n-2}$ árboles generadores posibles (para $n=50$ esto es más que el número estimado de átomos en el universo).
 \item Escriba el código en Python de un algoritmo que calcule el número de árboles generadores de un grafo de la clase \verb!Grafo_no_dirigido! del punto $(1)$. Coméntelo adecuadamente y verifíquelo para grafos completos con la fórmula del numeral anterior. Cuál es el $n$ más grande al que puede llegar antes de que su computador sea incapaz de seguir?
 \end{enumerate}
-\item Sea $G$ un grafo no dirigido con pesos en las aristas. Encuentre un algoritmo para construir un árbol generador de {\bf máximo peso} para $G$ que pueda ejecutarse en tiempo $O((n+m)\log(n))$.
+\item Sea $G$ un grafo no dirigido con pesos en las aristas. Escriba un algoritmo para construir un árbol generador de {\bf máximo peso} para $G$ que pueda ejecutarse en tiempo $O((n+m)\log(n))$. Justifique la validez de su respuesta.
 \newpage
 \item ({\it El algoritmo de Prim.}) Sea $G$ el grafo con costos en las aristas del siguiente dibujo:
 \begin{center}
@@ -100,14 +108,14 @@
 \item Cuál es peso mínimo de un árbol generador en $G_n$? La respuesta debe depender de $n$. Demuestre la validez de su respuesta usando el algoritmo de Prim.
 \item Implemente los algoritmos de Prim y Kruskal.
 \item Escriba tablas que midan el tiempo de ejecución y la memoria utilizada para encontrar el MST para los grafos $G_n$ para diferentes valores de $n$ (cuál es el máximo $n$ en el que su algoritmo funciona?).
-\item Escriba un párrafo que resuma sus conclusiones: Es alguno de los dos mejor que el otro en algún aspecto? Argumente su respuesta.
+\item Escriba un párrafo que resuma sus conclusiones: Es alguno de los dos algoritmos mejor que el otro en algún aspecto? Argumente su respuesta.
 \end{enumerate}
 
-\item ({\it Kruskal bueno}) Investigue los siguientes puntos:
+\item ({\it Hacia un Kruskal eficiente}) Investigue los siguientes puntos:
 \begin{enumerate}
-\item Describa de manera precisa la estructura de datos \verb!union find!.
-\item Escriba el código en python de una implementación eficiente del algoritmo de Kruskal usando \verb!union find!.
-\item Cálcule el tiempo requerido por su implementación argumentando la validez de su respuesta de manera precisa.
+\item Describa de manera precisa la estructura de datos \verb!union_find!.
+\item Escriba el código en python de una implementación eficiente del algoritmo de Kruskal usando \verb!union_find!.
+\item Cálcule el tiempo $O(\bullet)$ requerido por su implementación argumentando la validez de su respuesta de manera precisa.
 \end{enumerate}
 
 
