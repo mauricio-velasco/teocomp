@@ -1,0 +1,91 @@
+
+\documentclass[12pt, a4paper]{article}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  urlcolor=cyan,
+}
+\urlstyle{same}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+
+\newtheorem{theorem}{Teorema.}
+\newtheorem{lemma}[theorem]{Lema.}
+\newtheorem{corollary}[theorem]{Corolario.}
+\newtheorem{definition}[theorem]{Definici\'on:}
+\newtheorem{example}[theorem]{Ejemplo:}
+\newtheorem{problema}[theorem]{Problema:}
+\newtheorem{remark}[theorem]{Observaci\'on:}
+
+\usepackage{graphicx}
+\usepackage[spanish]{babel}
+%\usetheme{default}
+
+\newcommand{\pp}{\mathbb{P}}
+\newcommand{\zz}{\mathbb{Z}}
+\newcommand{\rr}{\mathbb{R}}
+\newcommand{\qq}{\mathbb{Q}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\EE}{\mathbb{E}}
+
+\usepackage{tikz, tikz-3dplot}
+
+\definecolor{cof}{RGB}{219,144,71}
+\definecolor{pur}{RGB}{186,146,162}
+\definecolor{greeo}{RGB}{91,173,69}
+\definecolor{greet}{RGB}{52,111,72}
+
+\date{}
+
+\begin{document}
+\title{Pr\'actico 2 TEOCOMP: Fundamentos de probabilidad y algoritmos codiciosos.}
+\author{Mauricio Velasco}
+\maketitle{}
+
+
+\begin{enumerate}
+\item ({\it Puntos fijos en permutaciones aleatorias}) Recuerde que los puntos fijos de una permutación $\sigma\in S_n$ son aquellos índices $i\in [n]$ con $\sigma(i)=i$.
+\begin{enumerate}
+\item Defina la variable aleatoria $Y^{(i)}:S_n\rightarrow \RR$ con 
+\[Y^{(i)}(\sigma)=
+\begin{cases}
+1\text{, si $\sigma(i)=i$}\\
+0\text{, de lo contrario}
+\end{cases}
+\]
+Si $\mathbb{P}$ es la medida uniforme en $S_n$, calcule $\EE[Y^{(i)}]$ dando un argumento preciso para su respuesta.
+\item Use la parte $(a)$ para encontrar el número esperado de puntos fijos de una permutación aleatoria de $S_n$, elegida uniformemente.
+\end{enumerate}
+
+
+\item ({\it Probabilidad de éxito de construcción de permutaciones aleatorias}) Suponga que $p_1,\dots p_N$ son variables aleatorias independientes, cada una uniforme en $\{1,2,\dots, N^3\}$.
+\begin{enumerate}
+\item Demuestre que la probabilidad de que $(p_1,\dots,p_N)$ no tenga repeticiones es por lo menos $1-1/n$.
+\item Una moneda cae cara con probabilidad $p$ y sello con probabilidad $q=1-p$. Calcule el número esperado de intentos antes de que la moneda caiga cara por primera vez.
+\item Calcule el número esperado de ejecuciones que debe hacer nuestro {\bf Algoritmo de permutación uniforme mediante sorting} antes de que genere una permutación (recuerde que el algoritmo se ejecuta repetidas veces hasta que las prioridades $p_i$ salgan todas distintas asi que el problema pregunta por el número esperado de intentos antes de que esto suceda). (Sugerencia: Mezcle las partes $(a)$ y $(b)$).
+\end{enumerate}
+
+\item ({\bf Coincidencias planetarias}) El planeta bajo observación esta habitado por $k$ habitantes y dá una vuelta a su estrella cada $n$ días (un día es un giro del planeta alrededor de su propio eje).
+\begin{enumerate}
+\item Sea Para $i,j\in \{1,\dots, k\}$ sea 
+\[X^{(ij)}=\begin{cases}
+1\text{, si las personas $i$ y $j$ cumplen años el mismo día}\\
+0\text{, de lo contrario.}
+\end{cases}
+\]
+Calcule $\EE[X_{ij}]$ asumiendo que los cumpleaños se distribuyen de manera uniforme en los distintos días. Justifique su respuesta de manera precisa.
+\item Sea $X$ la variable aleatoria que cuenta cuántas parejas de los $k$ individuos cumplen el mismo día. Calcule $\EE[X]$ justificando matemáticamente su respuesta.
+\item Use el punto anterior para demostrar que si hay por lo menos $\sqrt{2n}+1$ individuos en un cuarto entonces deberíamos esperar que al menos dos tengan el mismo cumpleaños.
+\end{enumerate}
+
+\end{enumerate}
+\end{document}
+
+
+
+
