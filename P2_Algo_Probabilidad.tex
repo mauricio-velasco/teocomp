@@ -49,16 +49,16 @@
 
 
 \begin{enumerate}
-\item ({\it Puntos fijos en permutaciones aleatorias}) Recuerde que los puntos fijos de una permutación $\sigma\in S_n$ son aquellos índices $i\in [n]$ con $\sigma(i)=i$.
+\item ({\it Puntos fijos en permutaciones aleatorias}) Recuerde que los puntos fijos de una permutación $\sigma\in S_n$ son aquellos índices $i\in \{1,\dots, n\}$ con $\sigma(i)=i$.
 \begin{enumerate}
-\item Defina la variable aleatoria $Y^{(i)}:S_n\rightarrow \RR$ con 
-\[Y^{(i)}(\sigma)=
+\item Para un entero $j$ cualquiera defina la variable aleatoria $Y^{(j)}:S_n\rightarrow \RR$ con 
+\[Y^{(j)}(\sigma)=
 \begin{cases}
-1\text{, si $\sigma(i)=i$}\\
+1\text{, si $\sigma(j)=j$}\\
 0\text{, de lo contrario}
 \end{cases}
 \]
-Si $\mathbb{P}$ es la medida uniforme en $S_n$, calcule $\EE[Y^{(i)}]$ dando un argumento preciso para su respuesta.
+Si $\mathbb{P}$ es la medida uniforme en $S_n$, calcule $\EE[Y^{(j)}]$ dando un argumento preciso para su respuesta.
 \item Use la parte $(a)$ para encontrar el número esperado de puntos fijos de una permutación aleatoria de $S_n$, elegida uniformemente.
 \end{enumerate}
 
@@ -66,21 +66,21 @@ Si $\mathbb{P}$ es la medida uniforme en $S_n$, calcule $\EE[Y^{(i)}]$ dando un 
 \item ({\it Probabilidad de éxito de construcción de permutaciones aleatorias}) Suponga que $p_1,\dots p_N$ son variables aleatorias independientes, cada una uniforme en $\{1,2,\dots, N^3\}$.
 \begin{enumerate}
 \item Demuestre que la probabilidad de que $(p_1,\dots,p_N)$ no tenga repeticiones es por lo menos $1-1/n$.
-\item Una moneda cae cara con probabilidad $p$ y sello con probabilidad $q=1-p$. Calcule el número esperado de intentos antes de que la moneda caiga cara por primera vez.
-\item Calcule el número esperado de ejecuciones que debe hacer nuestro {\bf Algoritmo de permutación uniforme mediante sorting} antes de que genere una permutación (recuerde que el algoritmo se ejecuta repetidas veces hasta que las prioridades $p_i$ salgan todas distintas asi que el problema pregunta por el número esperado de intentos antes de que esto suceda). (Sugerencia: Mezcle las partes $(a)$ y $(b)$).
+\item Una moneda cae cara con probabilidad $p$ y sello con probabilidad $q=1-p$. Calcule el número esperado de lanzamientos hasta que la moneda caiga cara por primera vez.
+\item Combinando los dos items anteriores, calcule el número esperado de ejecuciones que debe hacer nuestro {\bf Algoritmo de permutación uniforme mediante sorting} antes de que genere una permutación (recuerde que el algoritmo se ejecuta repetidas veces hasta que las prioridades $p_i$ salgan todas distintas asi que el problema pregunta por el número esperado de intentos antes de que esto suceda). (Sugerencia: Mezcle las partes $(a)$ y $(b)$ y note que su respuesta debe depender de $N$).
 \end{enumerate}
 
-\item ({\bf Coincidencias planetarias}) El planeta bajo observación esta habitado por $k$ habitantes y dá una vuelta a su estrella cada $n$ días (un día es un giro del planeta alrededor de su propio eje).
+\item ({\bf Coincidencias planetarias}) El planeta bajo observación esta habitado por $k$ habitantes $1,2,\dots, k$ y dá una vuelta a su estrella cada $n$ días (donde un día es un giro del planeta alrededor de su propio eje).
 \begin{enumerate}
-\item Sea Para $i,j\in \{1,\dots, k\}$ sea 
+\item Sea Para habitantes $i,j\in \{1,\dots, k\}$ sea 
 \[X^{(ij)}=\begin{cases}
-1\text{, si las personas $i$ y $j$ cumplen años el mismo día}\\
+1\text{, si los habitantes $i$ y $j$ cumplen años el mismo día}\\
 0\text{, de lo contrario.}
 \end{cases}
 \]
 Calcule $\EE[X_{ij}]$ asumiendo que los cumpleaños se distribuyen de manera uniforme en los distintos días. Justifique su respuesta de manera precisa.
 \item Sea $X$ la variable aleatoria que cuenta cuántas parejas de los $k$ individuos cumplen el mismo día. Calcule $\EE[X]$ justificando matemáticamente su respuesta.
-\item Use el punto anterior para demostrar que si hay por lo menos $\sqrt{2n}+1$ individuos en un cuarto entonces deberíamos esperar que al menos dos tengan el mismo cumpleaños.
+\item Use el punto anterior para demostrar que si hay por lo menos $1+\sqrt{2n}$ individuos en un cuarto entonces deberíamos esperar que al menos dos tengan el mismo cumpleaños.
 \end{enumerate}
 
 \end{enumerate}

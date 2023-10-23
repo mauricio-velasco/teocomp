@@ -46,7 +46,7 @@
 \maketitle{}
 \begin{enumerate} 
 
-\item {\it Scheduling avaricioso} Suponga que tenemos $N=100$ trabajos que deben compartir un mismo recurso. La longitud y la prioridad del $t$-ésimo trabajo estan dadas por $\ell_t:=(t-1)^2+4$ y $w_t=(t-5)^3$.
+\item {\it Scheduling avaricioso} Suponga que tenemos $N=100$ trabajos que deben compartir un mismo recurso. La longitud y la prioridad del $t$-ésimo trabajo estan dadas por $\ell_t:=(t-1)^2+4$ y $w_t=(t-5)^2$.
 \begin{enumerate}
 \item Escriba una implementación de un algoritmo que calcule el mínimo tiempo total requerido para cuplir esas tareas.
 \item Escriba tablas con los tiempos mínimos requeridos y las listas de las primeras $5$ y últimas $5$ tareas para $N=10$,$N=100$, $N=1000$.
@@ -80,10 +80,10 @@
 
 \item ({\it Cuántos árboles generadores tiene un grafo?}) El teorema de Birkhoff dice que el número de árboles generadores de un grafo no dirigido $G$ es igual al producto $(\lambda_1\dots\lambda_{n-1})/n$ donde los $\lambda_i$ denotan los valores propios diferentes de cero de la matriz $L=D-A$ donde $D$ es la matriz diagonal cuyas entradas son los grados de los vértices de $G$ y $A$ es la matriz de adyacencia de $G$. Realice los siguientes ejericios:
 \begin{enumerate}
-\item Si $G=K_4$ es el grafo completo de $4$ vértices, escriba la matriz $L$, calcule los valores propios y aplique la formula de Birkhoff. Dibuje todos los árboles generadores de $K_4$ y verifique que todo sea consistente.
+\item Si $G=K_4$ es el grafo completo de $4$ vértices, escriba la matriz $L$, calcule los valores propios y aplique la formula de Birkhoff. Dibuje todos los árboles generadores de $K_4$ y verifique que la fórmula de Birkhoff se cumple en este caso.
 \item Como es la matriz $L$ para el grafo $K_n$ completo con $n$ vértices?
-\item Use el Teorema de Birkhoff y la matriz que calculo en la parte $(b)$ para demostrar que $K_n$ tiene $n^{n-2}$ árboles generadores posibles (para $n=50$ esto es más que el número estimado de átomos en el universo).
-\item Escriba el código en Python de un algoritmo que calcule el número de árboles generadores de un grafo de la clase \verb!Grafo_no_dirigido! del punto $(1)$. Coméntelo adecuadamente y verifíquelo para grafos completos con la fórmula del numeral anterior. Cuál es el $n$ más grande al que puede llegar antes de que su computador sea incapaz de seguir?
+\item Use el Teorema de Birkhoff y la matriz que calculó en la parte $(b)$ para demostrar que $K_n$ tiene $n^{n-2}$ árboles generadores posibles (para $n=50$ esto es más que el número estimado de átomos en el universo).
+\item Escriba el código en Python de un algoritmo que calcule el número de árboles generadores de un grafo de la clase \verb!Grafo_no_dirigido! del punto $(1)$ mediante la fórmula de Birkhoff. Verifique la validez de su implementación para grafos completos comparando con la fórmula del numeral anterior. Cuál es el $n$ más grande al que puede llegar antes de que su computador sea incapaz de terminar el cálculo?
 \end{enumerate}
 \item Sea $G$ un grafo no dirigido con pesos en las aristas. Escriba un algoritmo para construir un árbol generador de {\bf máximo peso} para $G$ que pueda ejecutarse en tiempo $O((n+m)\log(n))$. Justifique la validez de su respuesta.
 \newpage
@@ -104,8 +104,7 @@
 
 \item ({\it Kruskal vs Prim}) El objetivo de este ejercicio es hacer una comparación empírica entre los algoritmos de Prim y Kruskal. 
 \begin{enumerate}
-\item Sea $G_n$ el grafo completo con $n$-vértices con pesos $1,2,3,\dots, \binom{n}{2}$ en las aristas.
-\item Cuál es peso mínimo de un árbol generador en $G_n$? La respuesta debe depender de $n$. Demuestre la validez de su respuesta usando el algoritmo de Prim.
+\item Sea $G_n$ el grafo completo con $n$-vértices con pesos $1,2,3,\dots, \binom{n}{2}$ en las aristas (las aristas estan ordenadas de la manera que uds quieran, esto lleva a grafos distintos pero no cambia el análisis).
 \item Implemente los algoritmos de Prim y Kruskal.
 \item Escriba tablas que midan el tiempo de ejecución y la memoria utilizada para encontrar el MST para los grafos $G_n$ para diferentes valores de $n$ (cuál es el máximo $n$ en el que su algoritmo funciona?).
 \item Escriba un párrafo que resuma sus conclusiones: Es alguno de los dos algoritmos mejor que el otro en algún aspecto? Argumente su respuesta.
