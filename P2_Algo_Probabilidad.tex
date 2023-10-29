@@ -43,48 +43,93 @@
 \date{}
 
 \begin{document}
-\title{Pr\'actico 2 TEOCOMP: Fundamentos de probabilidad y algoritmos codiciosos.}
+\title{Pr\'actico 2 TEOCOMP: Fundamentos de probabilidad y algoritmos probabilísticos.}
 \author{Mauricio Velasco}
 \maketitle{}
 
 
 \begin{enumerate}
+
+\item ({\it Estadística en el problema de selección de secretarie}) Implemente el Algoritmo de generación de permutaciones uniforme mediante sorting en $S_n$ que vimos en clase. 
+\begin{enumerate}
+\item Escriba el código de su implementación
+\item Para $n=20$ candidatos genere una muestra de $m=100$ permutaciones y escriba las $5$ primeras y las $5$ últimas.
+\item Marque los candidatos en que la firmas deberían hacer contrataciones si el ranqueo de candidatos esta dado por las diez permutaciones que generó en el punto anterior (en el problema de selección de asistente que vimos en clase).
+
+\item Escriba un código que reciba una permutación y calcule el número de candidatos que la firma debería contratar en el problema de selección de asistente que vimos en clase).
+\item Para muestras de $m=100,m=500$ y $m=1000$ permutaciones haga un dibujo que contenga, en un solo par de ejes:
+\begin{enumerate}
+\item Un histograma del número de contrataciones  realizadas en cada permutación de su muestra (ver por ejemplo \url{https://www.w3schools.com/python/matplotlib_histograms.asp})
+\item Una recta vertical en el valor teórico que vimos en clase.
+\item Una recta vertical en el número promedio de contrataciones realizadas.
+
+\end{enumerate}
+
+\end{enumerate}
+
+
+
 \item ({\it Puntos fijos en permutaciones aleatorias}) Recuerde que los puntos fijos de una permutación $\sigma\in S_n$ son aquellos índices $i\in \{1,\dots, n\}$ con $\sigma(i)=i$.
 \begin{enumerate}
-\item Para un entero $j$ cualquiera defina la variable aleatoria $Y^{(j)}:S_n\rightarrow \RR$ con 
+\item Para un entero $j$ cualquiera defina la variable aleatoria $Y^{(j)}:S_n\rightarrow \RR$ dada por
 \[Y^{(j)}(\sigma)=
 \begin{cases}
 1\text{, si $\sigma(j)=j$}\\
 0\text{, de lo contrario}
 \end{cases}
 \]
-Si $\mathbb{P}$ es la medida uniforme en $S_n$, calcule $\EE[Y^{(j)}]$ dando un argumento preciso para su respuesta.
+Si $\mathbb{P}$ es la medida de probabilidad uniforme en $S_n$, calcule $\EE[Y^{(j)}]$ dando un argumento preciso para su respuesta.
 \item Use la parte $(a)$ para encontrar el número esperado de puntos fijos de una permutación aleatoria de $S_n$, elegida uniformemente.
 \end{enumerate}
 
 
-\item ({\it Probabilidad de éxito de construcción de permutaciones aleatorias}) Suponga que $p_1,\dots p_N$ son variables aleatorias independientes, cada una uniforme en $\{1,2,\dots, N^3\}$.
+\item ({\it Probabilidad de éxito de nuestra construcción de permutaciones aleatorias}) Suponga que $p_1,\dots p_N$ son variables aleatorias independientes, cada una uniforme en $\{1,2,\dots, N^3\}$.
 \begin{enumerate}
 \item Demuestre que la probabilidad de que $(p_1,\dots,p_N)$ no tenga repeticiones es por lo menos $1-1/n$.
 \item Una moneda cae cara con probabilidad $p$ y sello con probabilidad $q=1-p$. Calcule el número esperado de lanzamientos hasta que la moneda caiga cara por primera vez.
 \item Combinando los dos items anteriores, calcule el número esperado de ejecuciones que debe hacer nuestro {\bf Algoritmo de permutación uniforme mediante sorting} antes de que genere una permutación (recuerde que el algoritmo se ejecuta repetidas veces hasta que las prioridades $p_i$ salgan todas distintas asi que el problema pregunta por el número esperado de intentos antes de que esto suceda). (Sugerencia: Mezcle las partes $(a)$ y $(b)$ y note que su respuesta debe depender de $N$).
 \end{enumerate}
 
-\item ({\bf Coincidencias planetarias}) El planeta bajo observación esta habitado por $k$ habitantes $1,2,\dots, k$ y dá una vuelta a su estrella cada $n$ días (donde un día es un giro del planeta alrededor de su propio eje).
+\item ({\bf Coincidencias planetarias}) Un planeta esta habitado por $k$ habitantes $1,2,\dots, k$ y dá una vuelta a su estrella cada $n$ días (donde un día es un giro del planeta alrededor de su propio eje).
 \begin{enumerate}
-\item Sea Para habitantes $i,j\in \{1,\dots, k\}$ sea 
+\item Para habitantes $i,j\in \{1,\dots, k\}$ sea 
 \[X^{(ij)}=\begin{cases}
 1\text{, si los habitantes $i$ y $j$ cumplen años el mismo día}\\
 0\text{, de lo contrario.}
 \end{cases}
 \]
 Calcule $\EE[X_{ij}]$ asumiendo que los cumpleaños se distribuyen de manera uniforme en los distintos días. Justifique su respuesta de manera precisa.
-\item Sea $X$ la variable aleatoria que cuenta cuántas parejas de los $k$ individuos cumplen el mismo día. Calcule $\EE[X]$ justificando matemáticamente su respuesta.
+\item Sea $X$ la variable aleatoria que cuenta el número de parejas de los $k$ individuos que cumplen el mismo día. Use la parte $(a)$ para calcular $\EE[X]$ justificando matemáticamente su respuesta.
 \item Use el punto anterior para demostrar que si hay por lo menos $1+\sqrt{2n}$ individuos en un cuarto entonces deberíamos esperar que al menos dos tengan el mismo cumpleaños.
+\item Convierta en resultados numéricos el cálculo anterior para el planeta tierra. Cómo explicaría este resultado en una frase sencilla?
 \end{enumerate}
 
+\item ({\it Árboles generadores conectando puntos aleatorios})  Escriba un programa que construya $20$ parejas de puntos aleatorios en el cuadrado $[0,1]\times [0,1]$
+con coordenadas $(X_i,Y_i)$ independientes y uniformente distribuidas en $[0,1]$ (ver \url{https://numpy.org/doc/stable/reference/random/generated/numpy.random.uniform.html})
+\begin{enumerate}
+\item Escriba el código de su implementación.
+\item Implemente una rutina que dibuje los puntos (por ejemplo mediante \verb!pyplot!) y úsela para producir las gráficas (los veinte puntos) de tres muestras distintas.
+\item Defina un grafo con vértices $\{1,\dots, 20\}$ ponga aristas entre todo par de vértices con costos $c(i,j)$ dados por las distancias entre los puntos respectivos´, es decir
+\[c(i,j)=\sqrt{(X_i-X_j)^2+(Y_i-Y_j)^2}.\] Implemente un código que calcule el minimum spanning tree (MST) de un grafo de estos.
+\item Dibuje los MST de las tres muestras de la primera parte.
+\item Haga un histograma de la longitud $c(T)$ de estos MST para conjuntos de $m=100,200,300$ muestras de $20$ puntos y dibuje una recta vertical en el valor promedio de estas longitudes. 
+\item Ver \url{http://web.mit.edu/dbertsim/www/papers/AppliedProbability/The%20minimum%20spanning%20tree%20constant%20in%20geometrical%20probability%20and%20under%20the%20independent%20model%3B%20a%20unified%20approach.pdf}
+para algo más de contexto.
 \end{enumerate}
+\end{enumerate}
+
 \end{document}
+
+
+\item ({\it Simulando percolación}) Coloreamos los cuadros de un tablero de ajedrez ($8\times 8$) de azul ó rojo coloreando cada cuadro de rojo con probabilidad $p$ de manera independiente.
+\begin{enumerate}
+\item Escriba un algoritmo que dibuje el tablero coloreado y muestre cuatro resultados para probabilidad $p=3/4$.
+\item Un tablero coloreado determina un grafo con vértices los cuadrados azules y conectando dos cuadrados azules cuando son adyacentes (intuitivamente estamos pensando que los cuadrados azules forman caminos y los rojos son barreras). Dibuje a mano el grafo de los ejemplos de la parte anterior. Cuántas componentes conexas tiene? Es posible llegar desde la fila de arriba hasta la de abajo?
+
+\item Haga una simulación que produzca 100 tableros aleatorios y estime en qué fracción de estos tableros el grafo resultante admite un camino desde la fila de arriba hasta la de abajo (Sugerencia: Use \verb!union_find!)
+\item Ejecute su simulación para diferentes valores de $p\in\{0.1 ,0.2,0.5,0.6,0.7,0.9\}$ y muestre los resultados en una tabla.
+Ver \url{https://algs4.cs.princeton.edu/lectures/keynote/15UnionFind.pdf} pag. 44.
+\end{enumerate}
 
 
 
