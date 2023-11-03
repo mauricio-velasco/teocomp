@@ -1,0 +1,66 @@
+
+\documentclass[12pt, a4paper]{article}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  urlcolor=cyan,
+}
+\urlstyle{same}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+
+\newtheorem{theorem}{Teorema.}
+\newtheorem{lemma}[theorem]{Lema.}
+\newtheorem{corollary}[theorem]{Corolario.}
+\newtheorem{definition}[theorem]{Definici\'on:}
+\newtheorem{example}[theorem]{Ejemplo:}
+\newtheorem{problema}[theorem]{Problema:}
+\newtheorem{remark}[theorem]{Observaci\'on:}
+
+\usepackage{graphicx}
+\usepackage[spanish]{babel}
+%\usetheme{default}
+
+\newcommand{\pp}{\mathbb{P}}
+\newcommand{\zz}{\mathbb{Z}}
+\newcommand{\rr}{\mathbb{R}}
+\newcommand{\qq}{\mathbb{Q}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\EE}{\mathbb{E}}
+
+\usepackage{tikz, tikz-3dplot}
+
+\definecolor{cof}{RGB}{219,144,71}
+\definecolor{pur}{RGB}{186,146,162}
+\definecolor{greeo}{RGB}{91,173,69}
+\definecolor{greet}{RGB}{52,111,72}
+
+\date{}
+
+\begin{document}
+\title{Pr\'actico 3 TEOCOMP: Complejidad Computacional.}
+\author{Mauricio Velasco}
+\maketitle{}
+
+
+\begin{enumerate}
+\item Demuestre formalmente que el siguiente problema de decisión esta en la clase de complejidad $P$: {\it Dado un grafo $G$ con costos en las aristas y un entero $h$, existe un árbol generador de $G$ con costo $\leq h$?}
+
+\item Demuestre las siguientes afirmaciones sobre lenguajes $L\subseteq \{0,1\}^*$:
+\begin{enumerate}
+\item Si $L_1,L_2\in P$ entonces $L_1\cap L_2\in P$
+\item Si $L_1 \in P$ entonces el complemento $\{0,1\}^*\setminus L_1\in P$
+\item Si $L_1,L_2\in NP$ entonces $L_1\cap L_2\in NP$
+\end{enumerate}
+
+\item Demuestre que si $L\in NP$ entonces $L$ puede decidirse mediante un algoritmo que corre en tiempo $O(2^{n^k})$ para alguna constante $k$ (que depende de $L$).
+
+
+\end{enumerate}
+
+\end{document}
