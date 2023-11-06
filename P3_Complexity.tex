@@ -62,6 +62,18 @@
 
 \item Demuestre que si $L\in NP$ entonces $L$ puede decidirse mediante un algoritmo que corre en tiempo $O(2^{n^k})$ para alguna constante $k$ (que depende de $L$).
 
+\item Demuestre que la relación $L_1\preceq_P L_2$ es transitiva en lenguajes. Es decir que $L_1\preceq_P L_2$ y $L_2\preceq_P L_3$ implica $L_1\preceq_P L_3$.
+
+\item Un VERTEX COVER de un grafo $G$ es u subconjunto $V'\subseteq V(G)$ tal que para todo $(u,v)\in E(G)$ tenemos que $u\in V'$ ó $v\in V'$ (o ambas). Es decir $V'$ es una colección de vértices que toca todas las aristas de $G$. El problema de decisión VERTEX-COVER consiste en decidir si dado un grafo $G$ y un entero $p$ existe un vertex cover de $G$ de tamaño $p$. En este problema estudiaremos la complejidad de VERTEX COVER:
+\begin{enumerate}
+\item Demuestre formalmente que VERTEX COVER esta en la clase de complejidad NP (es decir, proponga un certificado y un algoritmo de verificación y demuestre que la verificación ocurre en P).
+\item Demuestre que un subconjunto $V'\subseteq V(G)$ es un CLIQUE si y sólo si $V'$ es un vertex cover del grafo complemento $\overline{G}$ (el grafo complemento $\overline{G}$ se define como el grafo con los mismos vértices que $G$ y aristas complementarias a las de $G$ (es decir, $(u,v)\in E(\overline{G})$ si y solo si $(u,v)\not\in E(G)$ y $u\neq v$).
+\item Utilice la parte anterior para construir una reducción polinomial $[CLIQUE]\preceq_P [VERTEX-COVER]$.
+\item Use los puntos anteriores para concluir que VERTEX COVER es un problema NP Completo.
+\end{enumerate}
+
+
+
 
 
 \end{enumerate}
