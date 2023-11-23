@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2023.5.31)  6 NOV 2023 08:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2023.5.31)  21 NOV 2023 12:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -686,7 +686,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 81.
 Here is how much of TeX's memory you used:
  18386 strings out of 481239
  344171 string characters out of 5920377
- 592335 words of memory out of 5000000
+ 592336 words of memory out of 5000000
  33277 multiletter control sequences out of 15000+600000
  540228 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -700,7 +700,7 @@ onts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmti12.pfb>
-Output written on build/P3_Complexity.pdf (2 pages, 97210 bytes).
+Output written on build/P3_Complexity.pdf (2 pages, 97231 bytes).
 PDF statistics:
  72 PDF objects out of 1000 (max. 8388607)
  58 compressed objects within 1 object stream
